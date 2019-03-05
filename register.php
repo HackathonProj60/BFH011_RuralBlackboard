@@ -358,7 +358,7 @@ require "nav.php";
 						<p><i>Developed By</i></p>
 					</div>
 					<div class="col-sm-12" style="margin-top: 0px;margin-bottom: 0px;">
-						<a href="contributer.php"><p style="font-size: 3em;font-weight: bold;text-align: center" ">BFH011</p></a>
+						<a href="contributer.php"><p style="font-size: 3em;font-weight: bold;text-align: center">BFH011</p></a>
 					</div>
 				</div>
 			</div>

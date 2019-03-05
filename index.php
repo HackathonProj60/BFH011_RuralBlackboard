@@ -96,22 +96,11 @@ require 'count.php';
 											<a href="#">Science</a>
 											
 											<ul>
-												<?php 
-												for($i=0;$i<$count;$i++)
-												{
-													?>
-													<li> <?php echo "<b>",$deaname[$i],"</b>"; ?>
-												</li>											
-												<ul>
-													<?php
-													for ($j=0; $j < $count1 ; $j++) {
-														?>
-														<li><a href="deptcourses.php?cou=<?php echo $deptname[$i][$j];?>"><?php if(isset($deptname[$i][$j])){echo "<b style='text-decoration:none'>".$deptname[$i][$j]."</b>";}?></a></li>
-													<?php } ?>
-												</ul>
-												<?php
-											}
-											?>
+												<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPhysics  </a></b></li>
+												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspChemistry  </a></b></li>
+												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">&nbsp&nbsp&nbsp&nbspMathematics  </a></b></li>	
+												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">   Computer Science </a></b></li>									
+												
 										</ul>
 										
 										<!-- eof mega menu -->
@@ -120,11 +109,24 @@ require 'count.php';
 									<li>
 										<a href="#">Arts</a>
 										
-									</li>
+									
 									<!-- eof features -->
+									<ul>
+										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHistory  </a></b></li>
+										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGeography  </a></b></li>
+										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPolitical Science  </a></b></li>
+
+									</ul>
+								</li>
 
 									<li>
 										<a href="#">Commerce</a>
+									<ul>
+										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEconomics  </a></b></li>
+										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAccounts  </a></b></li>
+										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBusiness Studies  </a></b></li>
+
+									</ul>
 									</li>
 								</ul>
 							</nav>
@@ -319,20 +321,12 @@ require 'count.php';
 				<div class="row">
 					<div class="col-lg-10 offset-lg-1">
 						<!-- search form -->
-						<form class="course-search-form" method="GET" action="deptcourses.php">
-						<?php
-						$sql = "SELECT * FROM department";
-							$result = mysqli_query($con,$sql);
-
-							echo "<select name='cou' id = 'dept2'><option selected disabled>DEPARTMENT</option>";
-							while ($row = mysqli_fetch_array($result)) {
-								echo "<option value='" . $row['dept_name'] ."'>" . $row['dept_name'] ."</option>";
-							}
-							echo "</select>";
-	?>
-						<button class="site-btn btn-dark" name = "cs">Search Couse</button>
+						<div style="text-align:  center"><form class="course-search-form" method="GET" action="deptcourses.php">
+						<input type="text" style="background-color: #ffffff" name="course_search">
+						<button class="site-btn btn-dark" name = "cs">Search Course</button>
 						
 						</form>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -349,8 +343,8 @@ require 'count.php';
 				<li class="control active">All</li>
 				<li class="control">Science</li>
 				<li class="control">Arts</li>
-				<li class="control">Commerce & Management</li>
-				<li class="control">Humanities</li>
+				<li class="control">Commerce</li>
+				
 			</ul>                                       
 			
 				<?php 
@@ -499,16 +493,16 @@ require 'count.php';
 						<div class="widget widget_text">
 							<h4 class="widget-title">Contact Us</h4>
 							<p >
-								<i class="fa fa-map-marker fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> Kristu Jayanti College (Autonomous),K Narayanapura, Bangaluru-560077.
+								<i class="fa fa-map-marker fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> ######
 							</p>
 							<p>
-								<i class="fa fa-envelope fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> info@kristujayanti.com
+								<i class="fa fa-envelope fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> ****@###.com
 							</p>
 							<p>
-								<i class="fa fa-phone fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> (080)28465611,&nbsp;(080)28465770,&nbsp;(080)28465353
+								<i class="fa fa-phone fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> (080)20265##*,&nbsp;(080)2**657##,&nbsp;(080)***6##53
 							</p>
 							<p class="greylinks">
-								<i class="fa fa-internet-explorer fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> <a href="https://kristujayanti.edu.in">www.kristujayanti.edu.in</a>
+								<i class="fa fa-internet-explorer fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> <a href="#">########</a>
 							</p>
 						</div>
 					</div>
@@ -517,10 +511,10 @@ require 'count.php';
 							<h4 class="widget-title">Connect With Us</h4>
 
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="https://www.facebook.com/KristuJayantiCollege" target="_blank"><i style="font-size:20px;" class="fa fa-facebook highlight2 rightpadding_10" ></i></a>&nbsp;&nbsp;
-							<a href="https://www.youtube.com/user/kristujayanticollege" target="_blank"><i style="font-size:20px;" class="fa fa-youtube highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
-							<a href="https://twitter.com/kristujayanti99" target="_blank"><i style="font-size:20px;" class="fa fa-twitter highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
-							<a href="https://in.linkedin.com/in/kristujayanti" target="_blank"><i style="font-size:20px;" class="fa fa-linkedin highlight2 rightpadding_10"></i></a>
+							<a href="https://www.facebook.com/#" target="_blank"><i style="font-size:20px;" class="fa fa-facebook highlight2 rightpadding_10" ></i></a>&nbsp;&nbsp;
+							<a href="https://www.youtube.com/user/#" target="_blank"><i style="font-size:20px;" class="fa fa-youtube highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
+							<a href="https://twitter.com/#" target="_blank"><i style="font-size:20px;" class="fa fa-twitter highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
+							<a href="https://in.linkedin.com/in/#" target="_blank"><i style="font-size:20px;" class="fa fa-linkedin highlight2 rightpadding_10"></i></a>
 
 						</div>
 					</div>
@@ -536,13 +530,13 @@ require 'count.php';
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 text-center" style="margin-bottom: 5px;">
-						<p><span style="font-size:medium; color:white; text-align:right;">&copy;&nbsp;2018 <a href="adminlog.html">Kristu Jayanti College (Autonomous)</a>, K Narayanapura, Kothannur, Bangaluru-560077, Karnataka.</span></p>
+						
 					</div>
 					<div class="col-sm-12 text-center" style="margin-top: 0px;margin-bottom: 5px;">
 						<p><i>Developed By</i></p>
 					</div>
 					<div class="col-sm-12" style="margin-top: 0px;margin-bottom: 0px;">
-						<a href="contributer.php"><img src="logo/logo1.png" class="img-fluid" style="display: block;width: 25%;margin-left: auto;margin-right: auto;"></a>
+						<a href="contributer.php"><p style="font-size: 3em;font-weight: bold;text-align: center" ">BFH011</p></a>
 					</div>
 				</div>
 			</div>
@@ -559,3 +553,4 @@ require 'count.php';
 
 </body>
 </html>
+

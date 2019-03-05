@@ -93,7 +93,7 @@ require 'count.php';
 
 
 										<li>
-											<a href="#">Autonomous</a>
+											<a href="#">Science</a>
 											
 											<ul>
 												<?php 
@@ -118,13 +118,13 @@ require 'count.php';
 									</li>
 									<!-- eof features -->
 									<li>
-										<a href="#">Law</a>
+										<a href="#">Arts</a>
 										
 									</li>
 									<!-- eof features -->
 
 									<li>
-										<a href="#">Management</a>
+										<a href="#">Commerce</a>
 									</li>
 								</ul>
 							</nav>

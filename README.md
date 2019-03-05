@@ -1,4 +1,8 @@
-# BFH011_RuralBlackboard
+# RuralBlackboard
+
+# Tagline :-  Let's Digitalise The BlackBoard
+
+
 Rural Blackboard project made under category rural education for ByteFight 2019 Hackathon at Christ by Team BFH011 .
 
 # Education: 

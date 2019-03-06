@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="courses/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="courses/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="courses/css/owl.carousel.css"/>
+<link rel="stylesheet" href="courses/css/style.css"/>
+
+<section class="course-section pb-0">
+		
+		<div class="course-warp">
+			
+			<ul class="course-filter controls">
+			<p style="font-size:300%;text-align:center;"><b>OUR FEATURED COURSES</b></p>
+				<li class="control active">All</li>
+				<li class="control">Science</li>
+				<li class="control">Arts</li>
+				<li class="control">Commerce & Management</li>
+				<li class="control">Humanities</li>
+			</ul>                                       
+			
+				
+				<div class="row course-items-area">
+				<!-- course -->
+				 <div class = "col-lg-12">
+					
+					
+					<div class="mix col-md-6">
+					<div class="course-item">
+						
+						<div class="course-info">
+							<div class="course-text">
+								<img src = "courses/img/courses/1.jpg" style="width:150px;height:100px;">
+								<br>
+								
+								<h4 style="position:absolute;left:50%;top:15%;">Art & Crafts</h4>
+								
+								<p>Description:</p>
+								<p>Enrollment Start Date:</p>
+								<p>Enrollment End Date:</p>
+								<p>Course Duration:</p>
+								<p>Lectures:</p>
+								<p>Quiz:</p>
+								<div class="students">120 Students</div>
+								</div>
+								<div class="course-author">
+								<div class="ca-pic set-bg" style="background-image:url('courses/img/authors/1.jpg')"></div>
+								<p>William Parker, <span>Author</span></p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="mix col-md-6">
+					<div class="course-item">
+						
+						<div class="course-info">
+							<div class="course-text">
+								<img src = "courses/img/courses/1.jpg" style="width:150px;height:100px;">
+								<br>
+								
+								<h4 style="position:absolute;left:50%;top:15%;">Art & Crafts</h4>
+								
+								<p>Description:</p>
+								<p>Enrollment Start Date:</p>
+								<p>Enrollment End Date:</p>
+								<p>Course Duration:</p>
+								<p>Lectures:</p>
+								<p>Quiz:</p>
+								<div class="students">120 Students</div>
+								</div>
+								<div class="course-author">
+								<div class="ca-pic set-bg" style="background-image:url('courses/img/authors/1.jpg')"></div>
+								<p>William Parker, <span>Author</span></p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					
+					
+				 
+				</div>
+			</div>
+		</div>
+				
+			<br><br><br><br><br><br>
+	</section>

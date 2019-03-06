@@ -15,6 +15,8 @@ $qry=mysqli_query($con,"SELECT enroll.enroll_code as enroll_code,sum(result.scor
 while($row =mysqli_fetch_object($qry)){
 	$enroll_code = $row->enroll_code;
 	$score=$row->score;
+	//Need to change
+	$total=1;
 	$course_code=$row->course_code;
 	if($course!=$course_code){
 		$course=$course_code;
@@ -23,11 +25,12 @@ while($row =mysqli_fetch_object($qry)){
 			$total=$row1->total;
 		}
 	}
-	if($total!=0){
+	//need to change
+	// if($total!=0){
 	$percent=($score/$total)*100;
-	}else {
-		echo "Database Error";
-	}
+	// }else {
+	// 	echo "Database Error";
+	// }
 	
 	if ($percent>=40 and $percent<=100) {
 		$pass++;

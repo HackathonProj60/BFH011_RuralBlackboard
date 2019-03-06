@@ -1,7 +1,7 @@
 <?php
 session_start();
 session_unset();
-require 'nav.php';
+// require 'nav.php';
 require 'config.php';
 require 'count.php';
 ?>
@@ -29,11 +29,8 @@ require 'count.php';
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animations.css">
 	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
 	<link rel="stylesheet" href="css/shop.css">
-	
-	<link rel="stylesheet" href="courses/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="courses/css/style.css"/>
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
 	<!--[if lt IE 9]>
@@ -43,15 +40,19 @@ require 'count.php';
 	<![endif]-->
 
 </head>
-
+<style>
+.forgot:hover
+{
+	cursor:pointer;
+}
+</style>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="working.js"> </script>
-
-		
-
-
-	
+<script>
+function a()
+{
+	alert("Contact the Admin");
+}
+</script>
 	<!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
 	<![endif]-->
@@ -73,22 +74,22 @@ require 'count.php';
 
 			<!-- template sections -->
 
-			<header class="page_header header_white">
+			<header class="page_header header_white toggler_xs_right">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-12 display_table">
 							<div class="header_left_logo display_table_cell">
 								<a href="https://www.kristujayanti.edu.in" target="_blank"" target="_blank" class="logo top_logo">
-									<img src="images/logo.png" alt="">
+									<img src="images/logo.png" style = "width:400px;" alt="">
 								</a>
 							</div>
 
-							<div class="header_mainmenu display_table_cell">
+							<div class="header_mainmenu display_table_cell text-center">
 								<!-- main nav start -->
 								<nav class="mainmenu_wrapper">
 									<ul class="mainmenu nav sf-menu">
 										<li class="active">
-										<a href="index.php">Home</a>
+											<a href="index.php">Home</a>
 										</li>
 
 
@@ -96,37 +97,67 @@ require 'count.php';
 											<a href="#">Science</a>
 											
 											<ul>
-												<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPhysics  </a></b></li>
-												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspChemistry  </a></b></li>
-												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">&nbsp&nbsp&nbsp&nbspMathematics  </a></b></li>	
-												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">   Computer Science </a></b></li>									
-												
+												<!-- <?php 
+												for($i=0;$i<$count;$i++)
+												{
+													?>
+													<li> <?php echo "<b>",$deaname[$i],"</b>"; ?>
+												</li>											
+												<ul>
+													<?php
+													for ($j=0; $j < $count1 ; $j++) {
+														?>
+														<li><a href="deptcourses.php?cou=<?php echo $deptname[$i][$j];?>"><?php if(isset($deptname[$i][$j])){echo "<b style='text-decoration:none'>".$deptname[$i][$j]."</b>";}?></a></li>
+													<?php } ?>
+												</ul>
+												<?php
+											}
+											?> -->
+											<li>
+												<a href="deptcourses.php?cou=COMPUTER%20SCIENCE">Computer Science</a>
+											</li>
+											<li>
+												<a href="#">Mathematics</a>
+											</li>
+											<li>
+												<a href="#">Physics</a>
+											</li>
+											<li>
+												<a href="#">Chemistry</a>
+											</li>
 										</ul>
 										
 										<!-- eof mega menu -->
 									</li>
 									<!-- eof features -->
 									<li>
-										<a href="#">Arts</a>
-										
-									
-									<!-- eof features -->
-									<ul>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHistory  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGeography  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPolitical Science  </a></b></li>
-
-									</ul>
-								</li>
-
-									<li>
 										<a href="#">Commerce</a>
 									<ul>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEconomics  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAccounts  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBusiness Studies  </a></b></li>
+									<li>	
+										<a href="#">Accounts</a>
+									</li>
+									<li>
+										<a href="#">Business Studies</a>
+									</li>
+									<li>
+										<a href="#">Economics</a>
+									</li>
+								</ul>
+							</li>
+									<li>
 
-									</ul>
+										<a href="#">Arts</a>
+										<ul>
+											<li>
+												<a href="#">History</a>
+											</li>
+											<li>
+												<a href="#">Geography</a>
+											</li>
+											<li>
+												<a href="#">Political Science</a>
+											</li>
+										</ul>
 									</li>
 								</ul>
 							</nav>
@@ -137,7 +168,7 @@ require 'count.php';
 							</span>
 						</div>
 
-						<div class="header_right_buttons display_table_cell text-right ls">
+						<div class="header_right_buttons display_table_cell text-right hidden-xs ls">
 							<ul class="inline-list menu darklinks">
 								<li>
 									<div class="dropdown login-dropdown">
@@ -159,8 +190,8 @@ require 'count.php';
 
 												<div class="content-justify divider_20">
 													<div class="checkbox margin_0">
-														<a onclick = "a(){alert('Contact the Admin');}" aria-expanded="false">
-															Lost password?
+														<a onclick = "a()" class = "forgot" aria-expanded="false">
+															Forgot password?
 														</a>
 													</div>
 
@@ -190,7 +221,7 @@ require 'count.php';
 		</header>
 
 
-		<section class="intro_section page_mainslider ds" style="position:relative;">
+		<section class="intro_section page_mainslider ds">
 			<div class="flexslider vertical-nav" data-dots="true" data-nav="false">
 				<ul class="slides">
 					<li>
@@ -208,7 +239,7 @@ require 'count.php';
 												</h2>
 											</div>
 											<div class="intro-layer" data-animation="fadeInUp">
-												<p style="color:white;">
+												<p>
 													Make education your dream and it will help you to fulfill your dream.<br> Education takes us to the heights of success.
 												</p>
 											</div>
@@ -244,7 +275,7 @@ require 'count.php';
 												</h2>
 											</div>
 											<div class="intro-layer" data-animation="fadeInUp">
-												<p style="color:white;">
+												<p>
 													Make education your dream and it will help you to fulfill your dream.<br> Education takes us to the heights of success.
 												</p>
 											</div>
@@ -280,7 +311,7 @@ require 'count.php';
 												</h2>
 											</div>
 											<div class="intro-layer" data-animation="fadeInUp">
-												<p style="color:white;">
+												<p>
 													Make education your dream and it will help you to fulfill your dream.<br> Education takes us to the heights of success.
 												</p>
 											</div>
@@ -302,147 +333,116 @@ require 'count.php';
 					</li>
 
 				</ul>
-				
 			</div>
 			<!-- eof flexslider -->
-		
+
 		</section>
 
 		<!-- icon-background-teaser -->
-		
-		
-<section class="search-section ss-other-page myc">
-		<div class="container">
-			<div class="search-warp">
-			
-				<div class="section-title text-white">
-					<h2><span>Search your course</span></h2>
-				</div>
-				<div class="row">
-					<div class="col-lg-10 offset-lg-1">
-						<!-- search form -->
-						<div style="text-align:  center"><form class="course-search-form" method="GET" action="deptcourses.php">
-						<input type="text" style="background-color: #ffffff" name="course_search">
-						<button class="site-btn btn-dark" name = "cs">Search Course</button>
-						
-						</form>
-					</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-		
-		
-		<section class="course-section pb-0">
-		
-		<div class="course-warp">
-			
-			<ul class="course-filter controls">
-			<p style="font-size:300%;text-align:center;"><b>NEW COURSES</b></p>
-				<li class="control active">All</li>
-				<li class="control">Science</li>
-				<li class="control">Arts</li>
-				<li class="control">Commerce</li>
-				
-			</ul>                                       
-			
-				<?php 
-				$coursename = array();
-				$courseid = array();
-				$startdate = array();
-				$enddate = array();
-				$description = array();
-				$week = array();
-				$author = array();
-				$lect = array();
-				$coursename[0] = 0;
-				$courseid[0] = 0;
-				$startdate[0] = 0;
-				$enddate[0] = 0;
-				$description[0] = 0;
-				$week[0] = 0;
-				$author[0] = 0;
-				$lect[0] = 0;
-				$i = 1;
-				$query = mysqli_query($con,"select * from courses ORDER BY start_date desc");
-				$count = mysqli_num_rows($query);
-				
-				while($row = mysqli_fetch_row($query))
-				{
-					$courseid[$i] = $row[1];
-					$tempcc = $courseid[$i];
-					$startdate[$i] = $row[5];
-					$enddate[$i] = $row[6];
-					$description[$i] = $row[4];
-					$coursename[$i] = $row[2];
-					$week[$i] = $row[7];
-					$author[$i] = $row[3];
-					$query1 = mysqli_query($con,"select * from lecture where course_code = '$tempcc'");
-					$count2 = mysqli_num_rows($query1);
-					$lect[$i] = $count2;
-					$i++;
-				}
-				
-				
-				?>
-				
+
+		<section class="ls section_padding_top_20 section_padding_bottom_10 top_offset_content">
+			<div class="container">
+				<div class="isotope_container isotope row masonry-layout columns_margin_bottom_20">
 					
-				<div class="row course-items-area">
-				<!-- course -->
-				 <div class = "col-lg-12">
-					
-					<?php 
-						for($i=1;$i<=$count;$i++)
-						{
-						?>
-					<div class="mix col-md-6">
-					<div class="course-item">
+					<div class="isotope-item col-lg-4 col-md-6 col-sm-6 col-xs-12">
 						
-						<div class="course-info">
-							<div class="course-text">
-								<center><h4><?php echo $coursename[$i]; ?></h4>
-								<img src = "courses/img/courses/1.jpg" style="width:200px;height:200px;"></center>
-								<br>
-							
-								
-								<p><b>Description:</b><?php echo $description[$i]; ?></p>
-								<p><b>Enrollment Start Date:</b><?php echo $startdate[$i]; ?></p>
-								<p><b>Enrollment End Date:</b><?php echo $enddate[$i];?></p>
-								<p><b>Course Duration:</b><?php echo $week[$i]." weeks";?></p>
-								<p><b>Lectures:</b><?php echo $lect[$i]; ?></p>
-								<p><b>Quiz:</b><?php echo $lect[$i]; ?></p>
-								<div class="students">120 Students</div>
+						<div class="teaser gradient_bg_color icon-background-teaser hoverable-banner before_cover text-center">
+							<img src="images/download.png" style="width:180px;!important" alt="" class="icon-background">
+							<h4 class="highlight2 topmargin_0">
+								Computer Science
+							</h4>
+							<p class="bottommargin_0">
+								Principal areas of study within Computer Science include computer system networks, security, database systems, vision and graphics, numerical analysis, programming languages, software engineering and theory of computing.
+							</p>
+							<div class="media-links">
+								<a href="deptcourses.php?cou=COMPUTER SCIENCE" class="abs-link"></a>
 							</div>
-								<div class="course-author">
-								<div class="ca-pic set-bg" style="background-image:url('courses/img/authors/1.jpg')"></div>
-								<p> <span></span></p>
-								</div>
 						</div>
-							
+						
+					</div>
+					
+					<div class="isotope-item col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						<div class="teaser gradient_bg_color icon-background-teaser hoverable-banner before_cover text-center">
+							<img src="images/teaser_icon02.png" alt="" class="icon-background">
+							<h4 class="highlight2 topmargin_0">
+								Life Science
+							</h4>
+							<p class="bottommargin_0">
+								Life Sciences deal with science that involve the scientific study of living organisms. This encompasses biology, anatomy and physiology, botany, environmental science and oceanography.
+							</p>
+							<div class="media-links">
+								<a href="deptcourses.php?cou=LIFE SCIENCE" class="abs-link"></a>
+							</div>
 						</div>
 					</div>
-					<?php 
-						}
-						?>
-					
-					
-					
-				 
+					<div class="isotope-item col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						<div class="teaser gradient_bg_color icon-background-teaser hoverable-banner before_cover text-center">
+							<img src="images/new.png" alt="" class="icon-background" style="width:180px;!important">
+							<h4 class="highlight2 topmargin_0">
+								Commerce
+							</h4>
+							<p class="bottommargin_0">
+								Commerce deals with "the exchange of goods and services, especially on a large scale." It includes legal, economic, political, social, cultural and technological systems that operate in a country or in international trade.
+							</p>
+							<div class="media-links">
+								<a href="deptcourses.php?cou=COMMERCE" class="abs-link"></a>
+							</div>
+						</div>
+					</div>
+					<div class="isotope-item col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						<div class="teaser gradient_bg_color icon-background-teaser hoverable-banner before_cover text-center">
+							<img src="images/bba.png" alt="" class="icon-background" style="width:180px;!important">
+							<h4 class="highlight2 topmargin_0">
+								Management
+							</h4>
+							<p class="bottommargin_0">
+								The organization and coordination of the activities of a business in order to achieve defined objectives. Management consists of the interlocking functions of creating corporate policy.
+							</p>
+							<div class="media-links">
+								<a href="deptcourses.php?cou=MANAGEMENT" class="abs-link"></a>
+							</div>
+						</div>
+					</div>
+					<div class="isotope-item col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						<div class="teaser gradient_bg_color icon-background-teaser hoverable-banner before_cover text-center">
+							<img src="images/arts.png" alt="" class="icon-background" style="width:180px;!important">
+							<h4 class="highlight2 topmargin_0">
+								Humanities
+							</h4>
+							<p class="bottommargin_0">
+								The humanities emphasize analysis and exchange of ideas rather than the creative expression of the arts or the quantitative explanation of the sciences. History, Anthropology and Archaeology. 
+							</p>
+							<div class="media-links">
+								<a href="deptcourses.php?cou=HUMANITIES" class="abs-link"></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="isotope-item col-lg-4 col-md-6 col-sm-6 col-xs-12">
+						<div class="teaser gradient_bg_color icon-background-teaser hoverable-banner before_cover text-center">
+							<img src="images/law.png" alt="" class="icon-background" style="width:180px;!important">
+							<h4 class="highlight2 topmargin_0">
+								Law
+							</h4>
+							<p class="bottommargin_0">
+								Law is a system of rules that are created and enforced through social or governmental institutions to regulate behavior. It ensures that everyone adhere to the will of the state.
+							</p>
+							<div class="media-links">
+								<a href="#" class="abs-link"></a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-				
-			<br><br><br><br><br><br>
-	</section>
+		</section>
 
+		
 
-<!--	<section class ="spad">
-	
-	</section>
-	-->
-		
-		
+		<section class="ls section_padding_top_100 section_padding_bottom_100">
+			<br><br><br>
+			
+		</section>
+
 		<section class="cs parallax page_features section_padding_top_130 section_padding_bottom_100 columns_margin_bottom_30 container_padding_0 fluid_padding_0">
 			<div class="container-fluid">
 				<div class="row">
@@ -451,7 +451,7 @@ require 'count.php';
 							<div class="teaser-icon size_big highlight2">
 								<i class="fa fa-trophy" aria-hidden="true"></i>
 							</div>
-							<h3 class="counter" data-from="0" data-to="<?= $course ?>" data-speed="1100">0</h3>
+							<h3 class="counter" data-from="0" data-to="<?= $courseNo ?>" data-speed="1100">0</h3>
 							<p>Courses</p>
 						</div>
 					</div>
@@ -477,8 +477,6 @@ require 'count.php';
 			</div>
 		</section>
 
-		
-		
 		<footer class="ls section_padding_top_100 section_padding_bottom_100">
 			<div class="container">
 				<div class="row">
@@ -493,16 +491,16 @@ require 'count.php';
 						<div class="widget widget_text">
 							<h4 class="widget-title">Contact Us</h4>
 							<p >
-								<i class="fa fa-map-marker fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> ######
+								<i class="fa fa-map-marker fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i>  #####
 							</p>
 							<p>
-								<i class="fa fa-envelope fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> ****@###.com
+								<i class="fa fa-envelope fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> #######@kristujayanti.com
 							</p>
 							<p>
-								<i class="fa fa-phone fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> (080)20265##*,&nbsp;(080)2**657##,&nbsp;(080)***6##53
+								<i class="fa fa-phone fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> (080)2###611,&nbsp;(080)2###5770,&nbsp;(080)28####53
 							</p>
 							<p class="greylinks">
-								<i class="fa fa-internet-explorer fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> <a href="#">########</a>
+								<i class="fa fa-internet-explorer fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> <a href="#"></a>
 							</p>
 						</div>
 					</div>
@@ -511,14 +509,33 @@ require 'count.php';
 							<h4 class="widget-title">Connect With Us</h4>
 
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="https://www.facebook.com/#" target="_blank"><i style="font-size:20px;" class="fa fa-facebook highlight2 rightpadding_10" ></i></a>&nbsp;&nbsp;
-							<a href="https://www.youtube.com/user/#" target="_blank"><i style="font-size:20px;" class="fa fa-youtube highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
-							<a href="https://twitter.com/#" target="_blank"><i style="font-size:20px;" class="fa fa-twitter highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
-							<a href="https://in.linkedin.com/in/#" target="_blank"><i style="font-size:20px;" class="fa fa-linkedin highlight2 rightpadding_10"></i></a>
+							<a href="https://www.facebook.com/KristuJayantiCollege" target="_blank"><i class="fa fa-facebook fontsize_18 highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
+							<a href="https://www.youtube.com/user/kristujayanticollege" target="_blank"><i class="fa fa-youtube fontsize_18 highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
+							<a href="https://twitter.com/kristujayanti99" target="_blank"><i class="fa fa-twitter fontsize_18 highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
+							<a href="https://in.linkedin.com/in/kristujayanti" target="_blank"><i class="fa fa-linkedin fontsize_18 highlight2 rightpadding_10"></i></a>
 
 						</div>
 					</div>
-					
+					<div class="col-md-3 col-sm-3 text-center text-sm-left">
+						<div class="widget widget_mailchimp">
+
+							<h4 class="widget-title">Subscribe Newsletter</h4>
+
+							<form class="signup" action="http://webdesign-finder.com/html/starford/" method="get">
+								<p class="fontsize_14">Enter Email here to be updated. We promise not to send you spam!</p>
+								<div class="form-group">
+									<label for="mailchimp" class="sr-only">Enter your email here</label>
+									<i class="flaticon-envelope icon2-"></i>
+									<input name="email" type="email" id="mailchimp" class="mailchimp_email form-control" placeholder="Emai Address">
+									<button type="submit" class="theme_button color1">Subscribe</button>
+								</div>
+
+								<div class="response"></div>
+
+							</form>
+
+						</div>
+					</div>
 				</div>
 			</div>
 		</footer>
@@ -530,13 +547,13 @@ require 'count.php';
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 text-center" style="margin-bottom: 5px;">
-						
+						<p><span style="font-size:medium; color:white; text-align:right;">&copy;&nbsp;2018 <a href="adminlog.html">Kristu Jayanti College (Autonomous)</a>, K Narayanapura, Kothannur, Bangaluru-560077, Karnataka.</span></p>
 					</div>
 					<div class="col-sm-12 text-center" style="margin-top: 0px;margin-bottom: 5px;">
 						<p><i>Developed By</i></p>
 					</div>
 					<div class="col-sm-12" style="margin-top: 0px;margin-bottom: 0px;">
-						<a href="contributer.php"><p style="font-size: 3em;font-weight: bold;text-align: center" ">BFH011</p></a>
+						<p style="font-weight: bold;text-align: center">Team BFH011</p>
 					</div>
 				</div>
 			</div>
@@ -553,4 +570,3 @@ require 'count.php';
 
 </body>
 </html>
-

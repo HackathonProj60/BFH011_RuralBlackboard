@@ -81,10 +81,10 @@ require "nav.php";
 
 
 										<li>
-											<a href="#">Autonomous</a>
+											<a href="#">Science</a>
 											
 											<ul>
-												<?php 
+												<!-- <?php 
 												for($i=0;$i<$count;$i++)
 												{
 													?>
@@ -99,31 +99,113 @@ require "nav.php";
 												</ul>
 												<?php
 											}
-											?>
+											?> -->
+											<li>
+												<a href="deptcourses.php?cou=COMPUTER%20SCIENCE">Computer Science</a>
+											</li>
+											<li>
+												<a href="#">Mathematics</a>
+											</li>
+											<li>
+												<a href="#">Physics</a>
+											</li>
+											<li>
+												<a href="#">Chemistry</a>
+											</li>
 										</ul>
-
+										
 										<!-- eof mega menu -->
 									</li>
 									<!-- eof features -->
 									<li>
-										<a href="#">Law</a>
-
+										<a href="#">Commerce</a>
+									<ul>
+									<li>	
+										<a href="#">Accounts</a>
 									</li>
-									<!-- eof features -->
-
 									<li>
-										<a href="#">Management</a>
+										<a href="#">Business Studies</a>
 									</li>
-								</nav>
-								
-								<span class="toggle_menu">
-									<span></span>
-								</span>
-							</div>
+									<li>
+										<a href="#">Economics</a>
+									</li>
+								</ul>
+							</li>
+									<li>
+
+										<a href="#">Arts</a>
+										<ul>
+											<li>
+												<a href="#">History</a>
+											</li>
+											<li>
+												<a href="#">Geography</a>
+											</li>
+											<li>
+												<a href="#">Political Science</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+							<!-- eof main nav -->
+							<!-- header toggler -->
+							<span class="toggle_menu">
+								<span></span>
+							</span>
+						</div>
+
+						<div class="header_right_buttons display_table_cell text-right hidden-xs ls">
+							<ul class="inline-list menu darklinks">
+								<li>
+									<div class="dropdown login-dropdown">
+										<a href="#" id="login" data-target="#" data-toggle="dropdown" class="small-text medium">Login</a>
+										<div class="dropdown-menu" aria-labelledby="login">
+
+											<form method="post" action="session.php">
+
+												<div class="form-group has-placeholder">
+													<label for="login-email">Username</label>
+													<input type="text" class="form-control"  placeholder="Regno" name="usrname">
+												</div>
+
+
+												<div class="form-group has-placeholder">
+													<label for="login-password">Password</label>
+													<input type="password" class="form-control" placeholder="Password" name="password">
+												</div>
+
+												<div class="content-justify divider_20">
+													<div class="checkbox margin_0">
+														<a onclick = "a()" class = "forgot" aria-expanded="false">
+															Forgot password?
+														</a>
+													</div>
+
+													
+												</div>
+
+
+												<button type="submit" class="theme_button block_button color1" name="login">Log In</button>
+											</form>
+
+											<p class="topmargin_10 text-center grey highlightlinks">
+												Not a member yet? <a href="register.php">Register now</a>
+											</p>
+
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="register.php" class="small-text medium">Sign up</a>
+								</li>
+
+							</ul>
 						</div>
 					</div>
 				</div>
-			</header>
+			</div>
+		</header>
 
 
 			<section class="page_breadcrumbs ds parallax section_padding_top_100 section_padding_bottom_100">
@@ -302,68 +384,86 @@ require "nav.php";
 						</section>
 
 						<footer class="ls section_padding_top_100 section_padding_bottom_100">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 col-sm-6 text-center text-sm-left">
-						<div class="widget widget_text">
-							
-							<img src="images/logo2.png" alt="">
-							
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 text-center text-sm-left">
-						<div class="widget widget_text">
-							<h4 class="widget-title">Contact Us</h4>
-							<p >
-								<i class="fa fa-map-marker fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> ######
-							</p>
-							<p>
-								<i class="fa fa-envelope fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> ****@###.com
-							</p>
-							<p>
-								<i class="fa fa-phone fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> (080)20265##*,&nbsp;(080)2**657##,&nbsp;(080)***6##53
-							</p>
-							<p class="greylinks">
-								<i class="fa fa-internet-explorer fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> <a href="#">########</a>
-							</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-3 text-center text-sm-left">
-						<div class="widget widget_twitter">
-							<h4 class="widget-title">Connect With Us</h4>
+							<div class="container">
+								<div class="row">
+									<div class="col-md-3 col-sm-6 text-center text-sm-left">
+										<div class="widget widget_text">
+											<a href="index.html" class="logo vertical_logo">
+												<img src="images/logo2.png" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-6 text-center text-sm-left">
+										<div class="widget widget_text">
+											<h4 class="widget-title">Contact Us</h4>
+											<p >
+												<i class="fa fa-map-marker fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> Kristu Jayanti College (Autonomous),K Narayanapura, Bangaluru-560077.
+											</p>
+											<p>
+												<i class="fa fa-envelope fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> ##@kristujayanti.com
+											</p>
+											<p>
+												<i class="fa fa-phone fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> (080)2###5611,&nbsp;(080)2###5770,&nbsp;(080)284###53
+											</p>
+											
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-3 text-center text-sm-left">
+										<div class="widget widget_twitter">
+											<h4 class="widget-title">Connect With Us</h4>
 
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="https://www.facebook.com/#" target="_blank"><i style="font-size:20px;" class="fa fa-facebook highlight2 rightpadding_10" ></i></a>&nbsp;&nbsp;
-							<a href="https://www.youtube.com/user/#" target="_blank"><i style="font-size:20px;" class="fa fa-youtube highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
-							<a href="https://twitter.com/#" target="_blank"><i style="font-size:20px;" class="fa fa-twitter highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
-							<a href="https://in.linkedin.com/in/#" target="_blank"><i style="font-size:20px;" class="fa fa-linkedin highlight2 rightpadding_10"></i></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="https://www.facebook.com/KristuJayantiCollege" target="_blank"><i class="fa fa-facebook fontsize_18 highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
+											<a href="https://www.youtube.com/user/kristujayanticollege" target="_blank"><i class="fa fa-youtube fontsize_18 highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
+											<a href="https://twitter.com/kristujayanti99" target="_blank"><i class="fa fa-twitter fontsize_18 highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
+											<a href="https://in.linkedin.com/in/kristujayanti" target="_blank"><i class="fa fa-linkedin fontsize_18 highlight2 rightpadding_10"></i></a>
 
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-3 text-center text-sm-left">
+										<div class="widget widget_mailchimp">
+
+											<h4 class="widget-title">Subscribe Newsletter</h4>
+
+											<form class="signup" action="http://webdesign-finder.com/html/starford/" method="get">
+												<p class="fontsize_14">Enter Email here to be updated. We promise not to send you spam!</p>
+												<div class="form-group">
+													<label for="mailchimp" class="sr-only">Enter your email here</label>
+													<i class="flaticon-envelope icon2-"></i>
+													<input name="email" type="email" id="mailchimp" class="mailchimp_email form-control" placeholder="Emai Address" pattern="^[1-9]{2}[a-zA-z]{2}[1,2]{1}[a,h,k,A,H,K]{1}[0-9]{3,4}[@]{1}[k]{1}[r]{1}[i]{1}[s]{1}[t]{1}[u]{1}[j]{1}[a]{1}[y]{1}[a]{1}[n]{1}[t]{1}[i]{1}[.]{1}[c]{1}[o]{1}[m]{1}">
+													<button type="submit" class="theme_button color1">Subscribe</button>
+												</div>
+
+												<div class="response"></div>
+
+											</form>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</footer>
+
+
+						<section class="cs page_copyright section_padding_15 with_top_border_container">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<p>
+											<span style="font-size:medium; text-align:right;">&copy;&nbsp;2018 Kristu Jayanti College (Autonomous), K Narayanapura, Kothannur, Bangaluru-560077, Karnataka.</span>
+										</p>
+									</div>
+									<div class="col-sm-12 text-center" style="margin-top: 0px;margin-bottom: 5px;">
+							<p><i>Developed By BFH011</p>
 						</div>
+						<
+								</div>
+							</div>
+						</section>
+
 					</div>
-					
+					<!-- eof #box_wrapper -->
 				</div>
-			</div>
-		</footer>
-
-
-
-
-		<section class="cs page_copyright section_padding_15 with_top_border_container">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 text-center" style="margin-bottom: 5px;">
-						
-					</div>
-					<div class="col-sm-12 text-center" style="margin-top: 0px;margin-bottom: 5px;">
-						<p><i>Developed By</i></p>
-					</div>
-					<div class="col-sm-12" style="margin-top: 0px;margin-bottom: 0px;">
-						<a href="contributer.php"><p style="font-size: 3em;font-weight: bold;text-align: center">BFH011</p></a>
-					</div>
-				</div>
-			</div>
-		</section>
-
 				<!-- eof #canvas -->
 
 				<script src="js/compressed.js"></script>

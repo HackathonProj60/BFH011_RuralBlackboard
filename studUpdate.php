@@ -66,121 +66,81 @@ if ($sus = 1) {
 		<div id="box_wrapper">
 
 
-			<header class="page_header header_white">
+			<header class="page_header header_white toggler_xs_right">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-12 display_table">
 							<div class="header_left_logo display_table_cell">
-								<a href="#" target="_blank"" target="_blank" class="logo top_logo">
-									<img src="images/logo.png" alt="">
+								<a href="index.html" class="logo top_logo">
+									<img src="images/logo.png" style = "width:400px;" alt="">
 								</a>
 							</div>
 
-							<div class="header_mainmenu display_table_cell">
+							<div class="header_mainmenu display_table_cell text-center">
 								<!-- main nav start -->
 								<nav class="mainmenu_wrapper">
 									<ul class="mainmenu nav sf-menu">
 										<li class="active">
-										<a href="index.php">Home</a>
+											<a href="student.php">Home</a>
 										</li>
-
-
 										<li>
-											<a href="#">Science</a>
+											<a href="#">Autonomous</a>
 											
 											<ul>
-												<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPhysics  </a></b></li>
-												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspChemistry  </a></b></li>
-												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">&nbsp&nbsp&nbsp&nbspMathematics  </a></b></li>	
-												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">   Computer Science </a></b></li>									
-												
+												<?php 
+												for($i=0;$i<$count;$i++)
+												{
+													?>
+													<li> <?php echo "<b>",$deaname[$i],"</b>"; ?>
+												</li>											
+												<ul>
+													<?php
+													for ($j=0; $j < $count1 ; $j++) {
+														?>
+														<li><a href="deptcourses.php?cou=<?php echo $deptname[$i][$j];?>"><?php if(isset($deptname[$i][$j])){echo "<b style='text-decoration:none'>".$deptname[$i][$j]."</b>";}?></a></li>
+													<?php } ?>
+												</ul>
+												<?php
+											}
+											?>
 										</ul>
-										
+
 										<!-- eof mega menu -->
 									</li>
 									<!-- eof features -->
 									<li>
-										<a href="#">Arts</a>
-										
-									
-									<!-- eof features -->
-									<ul>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHistory  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGeography  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPolitical Science  </a></b></li>
+										<a href="#">Law</a>
 
-									</ul>
-								</li>
+									</li>
+									<!-- eof features -->
 
 									<li>
-										<a href="#">Commerce</a>
-									<ul>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEconomics  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAccounts  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBusiness Studies  </a></b></li>
-
-									</ul>
+										<a href="#">Management</a>
 									</li>
+
+									<li>
+										<a href="profile.php">My Profile</a>
+									</li>
+
+								</nav>
+								<!-- eof main nav -->
+								<!-- header toggler -->
+								<span class="toggle_menu">
+									<span></span>
+								</span>
+							</div>
+							<div class="header_right_buttons display_table_cell text-right hidden-xs ls">
+								<ul class="inline-list menu darklinks">
+									<li>
+										<a href="logout.php" class="small-text medium">Logout</a>
+									</li>
+
 								</ul>
-							</nav>
-							<!-- eof main nav -->
-							<!-- header toggler -->
-							<span class="toggle_menu">
-								<span></span>
-							</span>
-						</div>
-
-						<div class="header_right_buttons display_table_cell text-right ls">
-							<ul class="inline-list menu darklinks">
-								<li>
-									<div class="dropdown login-dropdown">
-										<a href="#" id="login" data-target="#" data-toggle="dropdown" class="small-text medium">Login</a>
-										<div class="dropdown-menu" aria-labelledby="login">
-
-											<form method="post" action="session.php">
-
-												<div class="form-group has-placeholder">
-													<label for="login-email">Username</label>
-													<input type="text" class="form-control"  placeholder="Regno" name="usrname">
-												</div>
-
-
-												<div class="form-group has-placeholder">
-													<label for="login-password">Password</label>
-													<input type="password" class="form-control" placeholder="Password" name="password">
-												</div>
-
-												<div class="content-justify divider_20">
-													<div class="checkbox margin_0">
-														<a onclick = "a(){alert('Contact the Admin');}" aria-expanded="false">
-															Lost password?
-														</a>
-													</div>
-
-													
-												</div>
-
-
-												<button type="submit" class="theme_button block_button color1" name="login">Log In</button>
-											</form>
-
-											<p class="topmargin_10 text-center grey highlightlinks">
-												Not a member yet? <a href="register.php">Register now</a>
-											</p>
-
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="register.php" class="small-text medium">Sign up</a>
-								</li>
-
-							</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</header>
+			</header>
 
 			<section class="page_breadcrumbs ds parallax section_padding_top_100 section_padding_bottom_100">
 				<div class="container">
@@ -232,73 +192,28 @@ if ($sus = 1) {
 
 
 
-			<footer class="ls section_padding_top_100 section_padding_bottom_100">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 col-sm-6 text-center text-sm-left">
-						<div class="widget widget_text">
-							
-							<img src="images/logo2.png" alt="">
-							
+			<section class="cs page_copyright section_padding_15 with_top_border_container">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<p ><span style="font-size:medium; color:white; text-align:right;">&copy;&nbsp;2018 Kristu Jayanti College (Autonomous), K Narayanapura, Kothannur, Bangaluru-560077, Karnataka.</span></p>
 						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 text-center text-sm-left">
-						<div class="widget widget_text">
-							<h4 class="widget-title">Contact Us</h4>
-							<p >
-								<i class="fa fa-map-marker fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> ######
-							</p>
-							<p>
-								<i class="fa fa-envelope fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> ****@###.com
-							</p>
-							<p>
-								<i class="fa fa-phone fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> (080)20265##*,&nbsp;(080)2**657##,&nbsp;(080)***6##53
-							</p>
-							<p class="greylinks">
-								<i class="fa fa-internet-explorer fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> <a href="#">########</a>
-							</p>
+						<div class="col-sm-12 text-center" style="margin-top: 0px;margin-bottom: 5px;">
+							<p><i>Developed By</i></p>
 						</div>
-					</div>
-					<div class="col-md-3 col-sm-3 text-center text-sm-left">
-						<div class="widget widget_twitter">
-							<h4 class="widget-title">Connect With Us</h4>
-
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="https://www.facebook.com/#" target="_blank"><i style="font-size:20px;" class="fa fa-facebook highlight2 rightpadding_10" ></i></a>&nbsp;&nbsp;
-							<a href="https://www.youtube.com/user/#" target="_blank"><i style="font-size:20px;" class="fa fa-youtube highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
-							<a href="https://twitter.com/#" target="_blank"><i style="font-size:20px;" class="fa fa-twitter highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
-							<a href="https://in.linkedin.com/in/#" target="_blank"><i style="font-size:20px;" class="fa fa-linkedin highlight2 rightpadding_10"></i></a>
-
+						<div class="col-sm-12" style="margin-top: 0px;margin-bottom: 0px;">
+							<a href="contributer.php"><img src="logo/logo1.png" class="img-fluid" style="display: block;width: 30%;margin-left: auto;margin-right: auto;"></a>
 						</div>
-					</div>
-					
-				</div>
-			</div>
-		</footer>
-
-
-
-
-		<section class="cs page_copyright section_padding_15 with_top_border_container">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 text-center" style="margin-bottom: 5px;">
-						
-					</div>
-					<div class="col-sm-12 text-center" style="margin-top: 0px;margin-bottom: 5px;">
-						<p><i>Developed By</i></p>
-					</div>
-					<div class="col-sm-12" style="margin-top: 0px;margin-bottom: 0px;">
-						<a href="contributer.php"><p style="font-size: 3em;font-weight: bold;text-align: center">BFH011</p></a>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
+
+
+		</div>
+		<!-- eof #box_wrapper -->
 	</div>
-	<!-- eof #box_wrapper -->
-</div>
-<!-- eof #canvas -->
+	<!-- eof #canvas -->
 
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>

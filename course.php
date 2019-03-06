@@ -73,121 +73,151 @@ require 'config.php';
 			</section>
 
 
-			<header class="page_header header_white">
+			<header class="page_header header_white toggler_xs_right">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-12 display_table">
 							<div class="header_left_logo display_table_cell">
-								<a href="#" target="_blank"" target="_blank" class="logo top_logo">
-									<img src="images/logo.png" alt="">
+								<a href="index.html" class="logo top_logo">
+									<img src="images/logo.png" style = "width:400px;" alt="">
 								</a>
 							</div>
 
-							<div class="header_mainmenu display_table_cell">
+							<div class="header_mainmenu display_table_cell text-center">
 								<!-- main nav start -->
 								<nav class="mainmenu_wrapper">
 									<ul class="mainmenu nav sf-menu">
 										<li class="active">
-										<a href="index.php">Home</a>
+											<a href="homepage.php">Home</a>
 										</li>
 
 
 										<li>
-											<a href="#">Science</a>
-											
-											<ul>
-												<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPhysics  </a></b></li>
-												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspChemistry  </a></b></li>
-												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">&nbsp&nbsp&nbsp&nbspMathematics  </a></b></li>	
-												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">   Computer Science </a></b></li>									
-												
-										</ul>
-										
-										<!-- eof mega menu -->
-									</li>
-									<!-- eof features -->
-									<li>
-										<a href="#">Arts</a>
-										
-									
-									<!-- eof features -->
-									<ul>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHistory  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGeography  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPolitical Science  </a></b></li>
+											<a href="#">Courses</a>
+											<div class="mega-menu">
+												<ul class="mega-menu-row">
+													<li class="mega-menu-col">
+														<a href = "#">COMMERCE</a>
+														<ul>
+															<?php $i=0;
+															for ($j=0; $j < sizeof($arr[$i]) ; $j++) {?>
+																<li><a href="course.php?cou=<?php echo $arr[$i][$j];?>"><?php {echo $arr[$i][$j];} ?></a><br></li>
+															<?php } ?>
+														</ul>
+													</li>
 
-									</ul>
-								</li>
+													<li class="mega-menu-col">
+														<a href="#">COMPUTER SCIENCE</a>
+														<ul>
+															<?php $i++;
+															for($j = 0;$j<sizeof($arr[$i]);$j++) {
+																
+																?>
+																<li><a href="course.php?cou=<?php echo $arr[$i][$j];?>"><?php echo $arr[$i][$j]; ?></a><br></li>
+															<?php } ?>
+														</ul>
+													</li>
+													<li class="mega-menu-col">
+														<a href="#">HUMANITIES</a>
+														<ul>
+															<?php $i++;
+															for($j = 0;$j<sizeof($arr[$i]);$j++) { ?>
+																<li><a href="course.php?cou=<?php echo $arr[$i][$j];?>"><?php echo $arr[$i][$j]; ?></a><br></li>
+															<?php } ?>
 
-									<li>
-										<a href="#">Commerce</a>
-									<ul>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEconomics  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAccounts  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBusiness Studies  </a></b></li>
+														</ul>
+													</li>
+													<li class="mega-menu-col">
+														<a href="#">LAW</a>
+														<ul>
+															<li>
+																<?php $i++;
+																
+																for($j = 0;$j<sizeof($arr[$i]);$j++) 
+																{ 
+																	?>
+																	<li><a href="course.php?cou=<?php echo $arr[$i][$j];?>"><?php echo $arr[$i][$j];  ?></a><br></li>
+																<?php }?>
+															</li>
+														</ul>
+													</li>
 
-									</ul>
-									</li>
-								</ul>
-							</nav>
-							<!-- eof main nav -->
-							<!-- header toggler -->
-							<span class="toggle_menu">
-								<span></span>
-							</span>
-						</div>
+													<li class="mega-menu-col">
+														<a href="#">LIFE SCIENCE</a>
 
-						<div class="header_right_buttons display_table_cell text-right ls">
-							<ul class="inline-list menu darklinks">
-								<li>
-									<div class="dropdown login-dropdown">
-										<a href="#" id="login" data-target="#" data-toggle="dropdown" class="small-text medium">Login</a>
-										<div class="dropdown-menu" aria-labelledby="login">
+														<ul>
 
-											<form method="post" action="session.php">
-
-												<div class="form-group has-placeholder">
-													<label for="login-email">Username</label>
-													<input type="text" class="form-control"  placeholder="Regno" name="usrname">
-												</div>
-
-
-												<div class="form-group has-placeholder">
-													<label for="login-password">Password</label>
-													<input type="password" class="form-control" placeholder="Password" name="password">
-												</div>
-
-												<div class="content-justify divider_20">
-													<div class="checkbox margin_0">
-														<a onclick = "a(){alert('Contact the Admin');}" aria-expanded="false">
-															Lost password?
-														</a>
-													</div>
-
+															<li>
+																<?php $i++;
+																for($j = 0;$j<sizeof($arr[$i]);$j++) { ?>
+																	<li><a href="course.php?cou=<?php echo $arr[$i][$j];?>"><?php echo $arr[$i][$j]; ?></a><br></li>
+																<?php } ?>
+															</li>
+														</ul>
+													</li>
 													
-												</div>
+													<li class="mega-menu-col">
+														<a href="#">MANAGEMENT</a>
+
+														<ul>
+
+															<li>
+																<?php $i++;
+																for($j = 0;$j<sizeof($arr[$i]);$j++) { ?>
+																	<li><a href="course.php?cou=<?php echo $arr[$i][$j];?>"><?php echo $arr[$i][$j]; ?></a><br></li>
+																<?php } ?>
+															</li>
+														</ul>
+													</li>
+
+												</ul>
+											</div>
+											<!-- eof mega menu -->
+										</li>
+										<!-- eof features -->
 
 
-												<button type="submit" class="theme_button block_button color1" name="login">Log In</button>
-											</form>
 
-											<p class="topmargin_10 text-center grey highlightlinks">
-												Not a member yet? <a href="register.php">Register now</a>
-											</p>
+										<!-- contacts -->
+										<li>
+											<a href="contact.html">About</a>
+											<ul>
+												<li>
+													<a href="contact.html">Contact 1</a>
+												</li>
+												<li>
+													<a href="contact2.html">Contact 2</a>
+												</li>
+												<li>
+													<a href="contact3.html">Contact 3</a>
+												</li>
+												<li>
+													<a href="contact4.html">Contact 4</a>
+												</li>
+											</ul>
+										</li>
+										<!-- eof contacts -->
+									</ul>
+								</nav>
+								<!-- eof main nav -->
+								<!-- header toggler -->
+								<span class="toggle_menu">
+									<span></span>
+								</span>
+							</div>
 
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="register.php" class="small-text medium">Sign up</a>
-								</li>
-
-							</ul>
+							<div class="header_right_buttons display_table_cell text-right hidden-xs ls">
+								<ul class="inline-list menu darklinks">
+									<li>
+										<a href="index-2.html" class="small-text medium">Logout</a>
+									</li>
+									
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</header>
+			</header>
 
 
 			<section class="page_breadcrumbs ds parallax section_padding_top_100 section_padding_bottom_100">

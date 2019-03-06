@@ -90,124 +90,81 @@ if ($sus == 1) {
 </div>
 
 
-<header class="page_header header_white">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-sm-12 display_table">
-							<div class="header_left_logo display_table_cell">
-								<a href="#" target="_blank"" target="_blank" class="logo top_logo">
-									<img src="images/logo.png" alt="">
-								</a>
-							</div>
+<header class="page_header header_white toggler_xs_right">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 display_table">
+				<div class="header_left_logo display_table_cell">
+					<a href="#" class="logo top_logo">
+						<img src="images/logo.png" style = "width:400px;" alt="">
+					</a>
+				</div>
 
-							<div class="header_mainmenu display_table_cell">
-								<!-- main nav start -->
-								<nav class="mainmenu_wrapper">
-									<ul class="mainmenu nav sf-menu">
-										<li class="active">
-										<a href="index.php">Home</a>
-										</li>
+				<div class="header_mainmenu display_table_cell text-center">
+					<!-- main nav start -->
+					<nav class="mainmenu_wrapper">
+						<ul class="mainmenu nav sf-menu">
+							<li class="active">
+								<a href="student.php">Home</a>
+							</li>
+							<li>
+								<a href="#">Autonomous</a>
 
-
-										<li>
-											<a href="#">Science</a>
-											
-											<ul>
-												<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPhysics  </a></b></li>
-												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspChemistry  </a></b></li>
-												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">&nbsp&nbsp&nbsp&nbspMathematics  </a></b></li>	
-												<li class = "text-body " style="font-size: 1.4em"><b><a href = "#">   Computer Science </a></b></li>									
-												
-										</ul>
-										
-										<!-- eof mega menu -->
-									</li>
-									<!-- eof features -->
-									<li>
-										<a href="#">Arts</a>
-										
-									
-									<!-- eof features -->
+								<ul>
+									<?php 
+									for($i=0;$i<$count;$i++)
+									{
+										?>
+										<li> <?php echo "<b>",$deaname[$i],"</b>"; ?>
+									</li>											
 									<ul>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHistory  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGeography  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPolitical Science  </a></b></li>
-
+										<?php
+										for ($j=0; $j < $count1 ; $j++) {
+											?>
+											<li><a href="deptcourses.php?cou=<?php echo $deptname[$i][$j];?>"><?php if(isset($deptname[$i][$j])){echo "<b style='text-decoration:none'>".$deptname[$i][$j]."</b>";}?></a></li>
+										<?php } ?>
 									</ul>
-								</li>
-
-									<li>
-										<a href="#">Commerce</a>
-									<ul>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEconomics  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAccounts  </a></b></li>
-										<li class = "text-body " style="font-size: 1.4em"><b><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBusiness Studies  </a></b></li>
-
-									</ul>
-									</li>
-									<li>
-										<a href="stuprofile.php">My Profile</a>
-									</li>
-								</ul>
-							</nav>
-							<!-- eof main nav -->
-							<!-- header toggler -->
-							<span class="toggle_menu">
-								<span></span>
-							</span>
-						</div>
-
-						<div class="header_right_buttons display_table_cell text-right ls">
-							<ul class="inline-list menu darklinks">
-								<li>
-									<div class="dropdown login-dropdown">
-										<a href="#" id="login" data-target="#" data-toggle="dropdown" class="small-text medium">Login</a>
-										<div class="dropdown-menu" aria-labelledby="login">
-
-											<form method="post" action="session.php">
-
-												<div class="form-group has-placeholder">
-													<label for="login-email">Username</label>
-													<input type="text" class="form-control"  placeholder="Regno" name="usrname">
-												</div>
-
-
-												<div class="form-group has-placeholder">
-													<label for="login-password">Password</label>
-													<input type="password" class="form-control" placeholder="Password" name="password">
-												</div>
-
-												<div class="content-justify divider_20">
-													<div class="checkbox margin_0">
-														<a onclick = "a(){alert('Contact the Admin');}" aria-expanded="false">
-															Lost password?
-														</a>
-													</div>
-
-													
-												</div>
-
-
-												<button type="submit" class="theme_button block_button color1" name="login">Log In</button>
-											</form>
-
-											<p class="topmargin_10 text-center grey highlightlinks">
-												Not a member yet? <a href="register.php">Register now</a>
-											</p>
-
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="register.php" class="small-text medium">Sign up</a>
-								</li>
-
+									<?php
+								}
+								?>
 							</ul>
-						</div>
-					</div>
+
+							<!-- eof mega menu -->
+						</li>
+						<!-- eof features -->
+						<li>
+							<a href="#">Law</a>
+
+						</li>
+						<!-- eof features -->
+
+						<li>
+							<a href="#">Management</a>
+						</li>
+
+						<li>
+							<a href="profile.php">My Profile</a>
+						</li>
+
+					</nav>
+					<!-- eof main nav -->
+					<!-- header toggler -->
+					<span class="toggle_menu">
+						<span></span>
+					</span>
+				</div>
+				<div class="header_right_buttons display_table_cell text-right ls">
+					<ul class="inline-list menu darklinks">
+						<li>
+							<a href="logout.php" class="small-text medium">Logout</a>
+						</li>
+
+					</ul>
 				</div>
 			</div>
-		</header>
+		</div>
+	</div>
+</header>
 <?php
 $regno = $_SESSION['regno'];
 

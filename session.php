@@ -14,7 +14,7 @@ if(isset($_POST["login"]))
 		{
 			session_start();
 			$_SESSION['regno'] = $usrname;
-			echo "<script type='text/javascript'>window.location.assign('student.php')</script>";
+			echo "<script type='text/javascript'>window.location.assign('studentN.php')</script>";
 		}else{
 			echo "<script type='text/javascript'>alert('login failed')</script>";
 			echo "<script type='text/javascript'>window.location.assign('index.php')</script>";
@@ -46,7 +46,7 @@ if(isset($_POST["login"]))
 				{
 					session_start();
 					$_SESSION['adminid'] = $usrname;
-					echo "<script type='text/javascript'>window.location.assign('adminhome.php')</script>";
+					echo "<script type='text/javascript'>window.location.assign('adminN.php')</script>";
 				}else{
 					echo "<script type='text/javascript'>alert('login failed')</script>";
 					echo "<script type='text/javascript'>window.location.assign('index.php')</script>";

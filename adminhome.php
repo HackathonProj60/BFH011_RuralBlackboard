@@ -1,10 +1,10 @@
 <?php
-require 'adminSec.php';  
-if ($sus == 1) {
+/*require 'adminSec.php'; */ 
+
  require 'config.php';
  require 'count.php';
  require 'adminDash.php';
-}
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -160,9 +160,9 @@ if ($sus == 1) {
 
                         <div class="side_header_social">
                             <span>
-                                <a href="#" class="social-icon color-bg-icon -icon soc-facebook"></a>
-                                <a href="#" class="social-icon color-bg-icon -icon soc-twitter"></a>
-                                <a href="#" class="social-icon color-bg-icon -icon soc-google"></a>
+                                <a href="https://www.facebook.com/KristuJayantiCollege" class="social-icon color-bg-icon -icon soc-facebook"></a>
+                                <a href="https://twitter.com/kristujayanti99" class="social-icon color-bg-icon -icon soc-twitter"></a>
+                                <a href="https://in.linkedin.com/in/kristujayanti" class="social-icon color-bg-icon -icon soc-google"></a>
                             </span>
                         </div>
 
@@ -209,154 +209,19 @@ if ($sus == 1) {
                  </a>
              </li>  
 
+</section>
 
-             <div class="clearfix"></div>
-         </ul>
-     </div>
- </div>
+
+
+<!-- Fotter -->
+<?php
+require 'fotter.php';
+?>
+
 </div>
-</section>
-<section class="ls section_padding_100">
-    <div class="container">
-
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="divider_40">Popular Courses</h2>
-            </div>
-
-            <div class="row text-center">
-                <div class="col-sm-4">
-                    <div class="chart" data-size="250" data-percent="<?= $per[0] ?>" data-line="10" data-bgcolor="#e7e7e7" data-trackcolor="#f4a115" data-speed="3200">
-                        <div class="chart-meta">
-                            <strong class="percent grey"><?= $per[0] ?></strong>
-                            <h4 class="text-uppercase thin"><?= $Cname[0] ?></h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="chart" data-size="250" data-percent="<?= $per[1] ?>" data-line="10" data-bgcolor="#e7e7e7" data-trackcolor="#f08521" data-speed="4800">
-                        <div class="chart-meta">
-                            <strong class="percent grey"><?= $per[1] ?></strong>
-                            <h4 class="text-uppercase thin"><?= $Cname[1] ?></h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="chart" data-size="250" data-percent="<?= $per[2] ?>" data-line="10" data-bgcolor="#e7e7e7" data-trackcolor="#e84b3a" data-speed="4100">
-                        <div class="chart-meta">
-                            <strong class="percent grey"><?= $per[2] ?></strong>
-                            <h4 class="text-uppercase thin"><?= $Cname[2] ?></h4>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="ls section_padding_100">
-    <div class="container" style="display: show;">
-
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="divider_40">Student Performance</h2>
-            </div>
-
-            <div class="row text-center">
-                <div class="col-sm-6">
-                    <div class="chart" data-size="250" data-percent="<?= $perpass ?>" data-line="10" data-bgcolor="#e7e7e7" data-trackcolor="#f4a115" data-speed="3200">
-                        <div class="chart-meta">
-                            <strong class="percent grey"><?= $perpass ?></strong>
-                            <h4 class="text-uppercase thin">Pass</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="chart" data-size="250" data-percent="<?= $perfail ?>" data-line="10" data-bgcolor="#e7e7e7" data-trackcolor="#f08521" data-speed="4800">
-                        <div class="chart-meta">
-                            <strong class="percent grey"><?= $perfail ?></strong>
-                            <h4 class="text-uppercase thin">Fail</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<footer class="ls section_padding_top_100 section_padding_bottom_100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6 text-center text-sm-left">
-                        <div class="widget widget_text">
-                            
-                            <img src="images/logo2.png" alt="">
-                            
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 text-center text-sm-left">
-                        <div class="widget widget_text">
-                            <h4 class="widget-title">Contact Us</h4>
-                            <p >
-                                <i class="fa fa-map-marker fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> ######
-                            </p>
-                            <p>
-                                <i class="fa fa-envelope fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> ****@###.com
-                            </p>
-                            <p>
-                                <i class="fa fa-phone fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> (080)20265##*,&nbsp;(080)2**657##,&nbsp;(080)***6##53
-                            </p>
-                            <p class="greylinks">
-                                <i class="fa fa-internet-explorer fontsize_18 highlight2 rightpadding_10" aria-hidden="true"></i> <a href="#">########</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 text-center text-sm-left">
-                        <div class="widget widget_twitter">
-                            <h4 class="widget-title">Connect With Us</h4>
-
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="https://www.facebook.com/#" target="_blank"><i style="font-size:20px;" class="fa fa-facebook highlight2 rightpadding_10" ></i></a>&nbsp;&nbsp;
-                            <a href="https://www.youtube.com/user/#" target="_blank"><i style="font-size:20px;" class="fa fa-youtube highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
-                            <a href="https://twitter.com/#" target="_blank"><i style="font-size:20px;" class="fa fa-twitter highlight2 rightpadding_10"></i></a>&nbsp;&nbsp;
-                            <a href="https://in.linkedin.com/in/#" target="_blank"><i style="font-size:20px;" class="fa fa-linkedin highlight2 rightpadding_10"></i></a>
-
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </footer>
-
-
-
-
-        <section class="cs page_copyright section_padding_15 with_top_border_container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 text-center" style="margin-bottom: 5px;">
-                        
-                    </div>
-                    <div class="col-sm-12 text-center" style="margin-top: 0px;margin-bottom: 5px;">
-                        <p><i>Developed By</i></p>
-                    </div>
-                    <div class="col-sm-12" style="margin-top: 0px;margin-bottom: 0px;">
-                        <a href="contributer.php"><p style="font-size: 3em;font-weight: bold;text-align: center">BFH011</p></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-    <!-- eof #box_wrapper -->
+<!-- eof #box_wrapper -->
 </div>
 <!-- eof #canvas -->
-
 <script src="js/compressed.js"></script>
 <script src="js/main.js"></script>
 <!-- <script src="js/switcher.js"></script> -->

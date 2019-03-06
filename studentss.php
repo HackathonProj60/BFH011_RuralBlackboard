@@ -84,7 +84,7 @@ if ($sus == 1) {
 
 		<header>
 			
-			<a href="student.php"><h1></h1></a>
+			<a href="studentN.php"><h1>Rural BlackBoard</h1></a>
 			<h2>
 				<p>
 					<b>Start Date: <?php echo $strtdt; ?> | End Date: <?php echo  $enddt; ?></b>
@@ -107,7 +107,7 @@ if ($sus == 1) {
 		</div>
 		<footer>
 			<p>
-				Copyright &copy; 2019,<b><a href="#"> Team BFH011</a></b> All Rights Reserved!  Designed By: <a href="http://idiot.ga"><b>TEAM BFH011</b></a> 
+				Copyright &copy; 2019,<b><a href="http://kristujayanti.edu.in"> Kristu Jayanti </a></b> All Rights Reserved!  Designed By: <a href="http://idiot.ga"><b>BFH011</b></a> 
 			</p>
 		</footer>
 	</div>

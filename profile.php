@@ -352,6 +352,7 @@ function hidefunc(y)
 											{
 										    $cowee[$sco] = $rowc->week;
 											$score[$sco] = $rowc->score;
+											$score[$sco] = ($score[$sco]/20)*100;
 											$sco++;
 											}
 										

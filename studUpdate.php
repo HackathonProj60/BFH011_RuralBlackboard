@@ -71,7 +71,7 @@ if ($sus = 1) {
 					<div class="row">
 						<div class="col-sm-12 display_table">
 							<div class="header_left_logo display_table_cell">
-								<a href="index.html" class="logo top_logo">
+								<a href="https://www.kristujayanti.edu.in" target="_blank"" target="_blank" class="logo top_logo">
 									<img src="images/logo.png" style = "width:400px;" alt="">
 								</a>
 							</div>
@@ -81,13 +81,15 @@ if ($sus = 1) {
 								<nav class="mainmenu_wrapper">
 									<ul class="mainmenu nav sf-menu">
 										<li class="active">
-											<a href="student.php">Home</a>
+											<a href="index.php">Home</a>
 										</li>
+
+
 										<li>
-											<a href="#">Autonomous</a>
+											<a href="#">Science</a>
 											
 											<ul>
-												<?php 
+												<!-- <?php 
 												for($i=0;$i<$count;$i++)
 												{
 													?>
@@ -102,20 +104,52 @@ if ($sus = 1) {
 												</ul>
 												<?php
 											}
-											?>
+											?> -->
+											<li>
+												<a href="deptcourses.php?cou=COMPUTER%20SCIENCE">Computer Science</a>
+											</li>
+											<li>
+												<a href="#">Mathematics</a>
+											</li>
+											<li>
+												<a href="#">Physics</a>
+											</li>
+											<li>
+												<a href="#">Chemistry</a>
+											</li>
 										</ul>
-
+										
 										<!-- eof mega menu -->
 									</li>
 									<!-- eof features -->
 									<li>
-										<a href="#">Law</a>
-
+										<a href="#">Commerce</a>
+									<ul>
+									<li>	
+										<a href="#">Accounts</a>
 									</li>
-									<!-- eof features -->
-
 									<li>
-										<a href="#">Management</a>
+										<a href="#">Business Studies</a>
+									</li>
+									<li>
+										<a href="#">Economics</a>
+									</li>
+								</ul>
+							</li>
+									<li>
+
+										<a href="#">Arts</a>
+										<ul>
+											<li>
+												<a href="#">History</a>
+											</li>
+											<li>
+												<a href="#">Geography</a>
+											</li>
+											<li>
+												<a href="#">Political Science</a>
+											</li>
+										</ul>
 									</li>
 
 									<li>
@@ -199,11 +233,9 @@ if ($sus = 1) {
 							<p ><span style="font-size:medium; color:white; text-align:right;">&copy;&nbsp;2018 Kristu Jayanti College (Autonomous), K Narayanapura, Kothannur, Bangaluru-560077, Karnataka.</span></p>
 						</div>
 						<div class="col-sm-12 text-center" style="margin-top: 0px;margin-bottom: 5px;">
-							<p><i>Developed By</i></p>
+							<p><i>Developed By BFH011</i></p>
 						</div>
-						<div class="col-sm-12" style="margin-top: 0px;margin-bottom: 0px;">
-							<a href="contributer.php"><img src="logo/logo1.png" class="img-fluid" style="display: block;width: 30%;margin-left: auto;margin-right: auto;"></a>
-						</div>
+						
 					</div>
 				</div>
 			</section>

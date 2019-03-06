@@ -2,11 +2,11 @@
 require 'config.php';
 
 $date=date('Y-m-d');
-$course = '0';
-$total = 0;
-$pass=0;
-$fail=0;
-$nototal=0;
+$course = '1';
+$total = 1;
+$pass=1;
+$fail=1;
+$nototal=1;
 $corN=array();
 $stdC=array();
 

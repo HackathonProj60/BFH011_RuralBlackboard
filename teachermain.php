@@ -77,16 +77,7 @@ if($query)
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-sm-12 text-md-center">
-
-                            <img src="images/logo.png" style="width:400px" alt="">
-                            
-                            
-                            <!-- header toggler -->
-                           <!--  <span class="toggle_menu">
-                                <span></span>
-                            </span> -->
-                        </div>
+                       
                         
                     </div>
                 </div>
@@ -190,6 +181,17 @@ if($query)
 
                         <div class="media-links">
                             <a href="report.php" class="abs-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="isotope-item col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="teaser gradient_bg_color icon-background-teaser hoverable-banner before_cover text-center">
+                        <h4 class="highlight2 topmargin_0">
+                            Create Certificate
+                        </h4>
+
+                        <div class="media-links">
+                            <a href="certi.php" class="abs-link"></a>
                         </div>
                     </div>
                 </div>

@@ -43,7 +43,7 @@ if ($fail>0) {
 	$failmessage="$fail question failed to upload!";
 	//echo "<script>alert('".$failmessage."');</script>";
 }
-header("refresh: 0; url=teacherss.php");
+header("refresh: 0; url=teachermain.php");
 $stmt->close();
 $con->close();
 ?>

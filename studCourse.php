@@ -51,81 +51,111 @@ if ($sus == 1) {
 	</div>
 
 	<header class="page_header header_white toggler_xs_right">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-12 display_table">
-					<div class="header_left_logo display_table_cell">
-						<a href="#" class="logo top_logo">
-							<img src="images/logo.png" style = "width:400px;" alt="">
-						</a>
-					</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 display_table">
+							<div class="header_left_logo display_table_cell">
+								<a href="https://www.kristujayanti.edu.in" target="_blank"" target="_blank" class="logo top_logo">
+									<img src="images/logo.png" style = "width:400px;" alt="">
+								</a>
+							</div>
 
-					<div class="header_mainmenu display_table_cell text-center">
-						<!-- main nav start -->
-						<nav class="mainmenu_wrapper">
-							<ul class="mainmenu nav sf-menu">
-								<li class="active">
-									<a href="studentN.php">Home</a>
-								</li>
-								<li>
-									<a href="#">Autonomous</a>
-									
-									<ul>
-										<?php 
-										for($i=0;$i<$count;$i++)
-										{
-											?>
-											<li> <?php echo "<b>",$deaname[$i],"</b>"; ?>
-										</li>											
-										<ul>
-											<?php
-											for ($j=0; $j < $count1 ; $j++) {
-												?>
-												<li><a href="deptcourses.php?cou=<?php echo $deptname[$i][$j];?>"><?php if(isset($deptname[$i][$j])){echo "<b style='text-decoration:none'>".$deptname[$i][$j]."</b>";}?></a></li>
-											<?php } ?>
+							<div class="header_mainmenu display_table_cell text-center">
+								<!-- main nav start -->
+								<nav class="mainmenu_wrapper">
+									<ul class="mainmenu nav sf-menu">
+										<li class="active">
+											<a href="index.php">Home</a>
+										</li>
+
+
+										<li>
+											<a href="#">Science</a>
+											
+											<ul>
+												<!-- <?php 
+												for($i=0;$i<$count;$i++)
+												{
+													?>
+													<li> <?php echo "<b>",$deaname[$i],"</b>"; ?>
+												</li>											
+												<ul>
+													<?php
+													for ($j=0; $j < $count1 ; $j++) {
+														?>
+														<li><a href="deptcourses.php?cou=<?php echo $deptname[$i][$j];?>"><?php if(isset($deptname[$i][$j])){echo "<b style='text-decoration:none'>".$deptname[$i][$j]."</b>";}?></a></li>
+													<?php } ?>
+												</ul>
+												<?php
+											}
+											?> -->
+											<li>
+												<a href="deptcourses.php?cou=COMPUTER%20SCIENCE">Computer Science</a>
+											</li>
+											<li>
+												<a href="#">Mathematics</a>
+											</li>
+											<li>
+												<a href="#">Physics</a>
+											</li>
+											<li>
+												<a href="#">Chemistry</a>
+											</li>
 										</ul>
-										<?php
-									}
-									?>
+										
+										<!-- eof mega menu -->
+									</li>
+									<!-- eof features -->
+									<li>
+										<a href="#">Commerce</a>
+									<ul>
+									<li>	
+										<a href="#">Accounts</a>
+									</li>
+									<li>
+										<a href="#">Business Studies</a>
+									</li>
+									<li>
+										<a href="#">Economics</a>
+									</li>
 								</ul>
-								
-								<!-- eof mega menu -->
 							</li>
-							<!-- eof features -->
-							<li>
-								<a href="#">Law</a>
-								
-							</li>
-							<!-- eof features -->
+									<li>
 
-							<li>
-								<a href="#">Management</a>
-							</li>
+										<a href="#">Arts</a>
+										<ul>
+											<li>
+												<a href="#">History</a>
+											</li>
+											<li>
+												<a href="#">Geography</a>
+											</li>
+											<li>
+												<a href="#">Political Science</a>
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<a href="studNprofile.php">My Profile</a>
+									</li>
+								</ul>
+							</nav>
+							<!-- eof main nav -->
+							<!-- header toggler -->
+							<span class="toggle_menu">
+								<span></span>
+							</span>
+						</div>
+
+						
+
 							
-							<li>
-								<a href="studNprofile.php">My Profile</a>
-							</li>
-						</ul>
-
-					</nav>
-					<!-- eof main nav -->
-					<!-- header toggler -->
-					<span class="toggle_menu">
-						<span></span>
-					</span>
-				</div>
-				<div class="header_right_buttons display_table_cell text-right hidden-xs ls">
-					<ul class="inline-list menu darklinks">
-						<li>
-							<a href="logout.php" class="small-text medium">Logout</a>
-						</li>
-
-					</ul>
+						
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</header>
+		</header>
 
 
 <!-- wrappers for visual page editor and boxed version of template -->

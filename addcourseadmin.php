@@ -83,7 +83,6 @@ $('#check3').on('change', function() {
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
     
-
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
     </button>
@@ -208,7 +207,7 @@ $('#check3').on('change', function() {
 										<input type="number" class="form-control" placeholder=" Course Period" name="cl" id="calc_shipping_postcode" required>
 									</div>
 									<div class="form-group col-sm-12">
-										<textarea class = "form-control" placeholder="Course Description." form = "addcourse" rows = "5" name = "desc" required></textarea>
+										<input type="text" name="desc" class="form-control" placeholder=" Course Description"  required>
 									</div>
 									<div class="form-group col-sm-12">
 										<b>Enroll Period</b>
@@ -246,7 +245,7 @@ $('#check3').on('change', function() {
 							$date2= $_POST['enddt'];
 							$courseLength=$_POST['cl'];
 							$description = $_POST['desc'];
-
+							
 							$query = $con->prepare("Select dept_id from department where dept_name = ?");
 							$query->bind_param("s",$department);
 							if($query->execute())
@@ -267,6 +266,7 @@ $('#check3').on('change', function() {
 								}
 								else
 								{
+
 									echo "<script type = 'text/javascript'>alert('Course Creation failed')</script>";
 								}
 							}

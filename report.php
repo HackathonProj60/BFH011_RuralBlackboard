@@ -67,9 +67,7 @@ if ($sus == 1) {
 					<div class="row">
 
 						<div class="col-sm-12 text-md-center">
-							<a href="#" class="logo top_logo">
-								<img src="images/logo.png" style="width:400px" alt="">
-							</a>
+							
 
 							<!-- header toggler -->
 							

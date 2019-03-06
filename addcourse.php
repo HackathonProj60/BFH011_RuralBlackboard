@@ -1,253 +1,297 @@
 <?php
 require 'staffSec.php';
 if ($sus == 1) {
-    require 'config.php';
+  require 'config.php';
 }
 ?>
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+<html lang="en">
 
-
-<!-- Mirrored from webdesign-finder.com/html/starford/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Oct 2018 05:22:30 GMT -->
 <head>
-	<title>E-PORTAL</title>
-	<meta charset="utf-8">
-	<!--[if IE]>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<![endif]-->
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/animations.css">
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
-	<link rel="stylesheet" href="css/shop.css">
-	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <title>E-Portal - Dashboard</title>
 
-	<!--[if lt IE 9]>
-		<script src="js/vendor/html5shiv.min.js"></script>
-		<script src="js/vendor/respond.min.js"></script>
-		<script src="js/vendor/jquery-1.12.4.min.js"></script>
-	<![endif]-->
+  <!-- Bootstrap core CSS-->
+  <link href="StudStyle/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Custom fonts for this template-->
+  <link href="StudStyle/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="StudStyle/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="StudStyle/css/sb-admin.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+<style>
+#displaythis
+{
+  display:none;
+  margin-top:-40px;
+}
+</style>
 
+
+
+</script>
 <body>
-	<!--[if lt IE 9]>
-		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
-	<![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
 
-	<div class="preloader">
-		<div class="preloader_image"></div>
-	</div>
+$('#check1').on('change', function() {
+  
+   $('#check1').val(this.checked ? '1' : '0');
+   
+  
+});
 
-	<!-- search modal -->
-	
-
-	<!-- Unyson messages modal -->
-	
-	<!-- eof .modal -->
-	<div id="canvas">
-        <div id="box_wrapper">
-            <section class="page_toplogo ls section_padding_top_5 section_padding_bottom_5 toggler_right">
-
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-sm-12 text-md-center">
-                            <a href="#" class="logo top_logo">
-                                <img src="images/logo.png" style="width:400px" alt="">
-                            </a>
-                            
-                            <!-- header toggler -->
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-                
-            </section>
-            
-            <header class="page_header_side ls">
-                <span class="toggle_menu_side">
-                    <span></span>
-                </span>
-                <div class="scrollbar-macosx">
-                    <div class="side_header_inner">
-                        <div class="text-center">
-                            <a href="index.php" class="logo vertical_logo">
-                                <img src="images/logo.png" alt="">
-                            </a>
-                        </div>
-                        <div class="header-side-menu darklinks">
-                            <!-- main side nav start -->
-                            <nav class="mainmenu_side_wrapper">
-                                <ul class="nav menu-click">
-                                    <li class="active">
-                                        <a href="teachermain.php">Home</a>
-                                    </li>
+$('#check2').on('change', function() {
+  
+   $('#check2').val(this.checked ? '1' : '0');
+   
+  
+});
 
 
-                                    <li>
-                                        <a href="#">Services</a>
-                                        <ul>
-                                            <li>
-                                                <a href="#">Add New Course</a>
-                                            </li>
+$('#check3').on('change', function() {
+  
+   $('#check3').val(this.checked ? '1' : '0');
+   
+  
+});
 
-                                            <li>
-                                                <a href="courseselectadd.php">Add Notes</a>
-                                            </li>
+    $('#showthat').click(function() {
+      $('#displaythis').toggle("slide");
+    });
 
+  
+});
+</script>
+  <!--[if lt IE 9]>
+    <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+  <![endif]-->
 
+  <body id="page-top">
+  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-                                        </ul>
-                                    </li>
+    
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
 
-
-                                    <li>
-                                        <a href="report.php">Report</a>
-                                    </li>
-                                    <li>
-                                        <a href="logout.php">LOGOUT</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <!-- eof main side nav -->
-                        </div>
-
-
-                        <div class="side_header_social">
-                            <span>
-                                <a href="#" class="social-icon color-bg-icon -icon soc-facebook"></a>
-                                <a href="#" class="social-icon color-bg-icon -icon soc-twitter"></a>
-                                <a href="#" class="social-icon color-bg-icon -icon soc-google"></a>
-                            </span>
-                        </div>
-
-                    </div>
-                </div>
-            </header>            
-            
-            <section class="ls section_padding_top_100 section_padding_bottom_100">
-                <div class="container ">
-                    <div class="row">   
-                        <form class="shop-register" role="form" id = "addcourse" method="post">								
-                            <div class="col-sm-12">
-                                <div class="shipping-calculator-form with_padding color_border">
-                                    <h3 class="text-center" style="margin-top:-100px;">Add New Course</h3>
-                                    <p>Fill the below details</p>
-                                    <div class="form-group col-sm-6">
-
-                                     <?php
-                                     $sql = "SELECT * FROM department";
-                                     $result = mysqli_query($con,$sql);
-
-                                     echo "<select name='dept' class='country_to_state form-control' ><option selected disabled>DEPARTMENT</option>";
-                                     while ($row = mysqli_fetch_array($result)) {
-                                         echo "<option value='" . $row['dept_name'] ."'>" . $row['dept_name'] ."</option>";
-                                     }
-                                     echo "</select>";
-                                     ?>
-
-                                 </div>
-                                 <div class="form-group col-sm-6">
-                                    <input type="text" class="form-control" value="" placeholder="Course Id" name="cid" id="calc_shipping_postcode">
-                                </div>
-                                
-                                <div class="form-group col-sm-6">
-                                    START DATE: <input type="date" class="form-control"  value="<?php date_default_timezone_set('Asia/Kolkata');echo date('Y-m-d'); ?>" name="strtdt" id="calc_shipping_state">
-                                </div>
-                                <div class="form-group col-sm-6">
-                                 END DATE: <input type="date" class="form-control" name="enddt" id="calc_shipping_state">
-                             </div>
-                             <div class="form-group col-sm-6">
-                                <input type="text" class="form-control" value="" placeholder="Course Name" name="cn" id="calc_shipping_postcode">
-                            </div>
-                            <div class="form-group col-sm-6">
-                                <input type="text" class="form-control" value="" style="visibility:hidden;">
-                            </div>
-                            <div class="form-group col-sm-12">
-                                <textarea class = "form-control" placeholder="Course Description." form = "addcourse" rows = "5" name="desc"></textarea>
-                            </div>
-                        </div>
-                        <center>
-                            <input type="submit" name="submit" class="theme_button color2" value = "ADD">
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <button type="reset" name="calc_shipping" class="theme_button color2 ">CLEAR</button>
-                        </center>
-
-                    </div>
-                </form>
-            </div>	
+    <!-- Navbar Search -->
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button">
+            <i class="fas fa-search"></i>
+          </button>
         </div>
-    </section>
+      </div>
+    </form>
 
-    <!-- fotter -->
-    <?php
-    require 'fotter.php';
-    ?>
+    <!-- Navbar -->
+    <ul class="navbar-nav ml-auto ml-md-0">
+      <li class="nav-item dropdown no-arrow">
+        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+          <a class="dropdown-item" href="#">Profile</a>
+       
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+        </div>
+      </li>
+    </ul>
 
-</div>
-<!-- eof #box_wrapper -->
-</div>
-<!-- eof #canvas -->
-<script src="js/compressed.js"></script>
-<script src="js/main.js"></script>
-<script src="js/switcher.js"></script>
+  </nav>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="adminN.php">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+     
+     
+<li class="nav-item">
+ <a class="nav-link" id = "showthat">
+  <i class="fas fa-fw fa-bars"></i>
+  <span>Services</span>
+  </li>
+                                      
+                                        <ul id = "displaythis">
+                                            <li>
+                                                <a href="addteacher.php"  style="color:white;">Add Teachers</a>
+                                            </li>
+                                            <li>
+                                                <a style="color:white;" href="addcourseadmin.php">Add New Course</a>
+                                            </li>
+                                            <li>
+                                                <a style="color:white;" href="delcourse.php">Manage Course</a>
+                                            </li>
+                                          
+                                            <li>
+                                                <a style="color:white;" href="adddept.php">Add Department</a>
+                                            </li>
+                                            <li>
+                                                <a style="color:white;" href="deldept.php">Remove Department</a>
+                                            </li>
+                                            <li>
+                                                <a style="color:white;" href="delete.php">Delete Users</a>
+                                            </li>
+                                            <li>
+                                                <a style="color:white;" href="updateadmin.php">Update Password</a>
+                                            </li>
+                                        </ul>
+                                   
+</a>
+</li>
+
+<li class="nav-item">
+ <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+  <i class="fas fa-fw fa-angle-right"></i>
+  <span>Logout</span>
+</a>
+</li>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<li>
+  <div>
+    
+  </div>
+</li>
+</ul>
+     <div id="content-wrapper">
+  <center><h3>ADD COURSE</h3></center><br><br><br><br>
+  <div class="container-fluid">
+   <div class="row">
+        <div class="col-xl-6 col-sm-6 mb-6">
+<form method = "POST">
+                    <?php
+                    $sql = "SELECT * FROM department";
+                    $result = mysqli_query($con,$sql);
+                    echo "<select name='dept' class='country_to_state form-control' ><option selected disabled>DEPARTMENT</option>";
+                    while ($row = mysqli_fetch_array($result)) {
+                      echo "<option value='" . $row['dept_name'] ."'>" . $row['dept_name'] ."</option>";
+                    }
+                    echo "</select>";
+                    ?>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" placeholder="Course Id" name="cid" id="calc_shipping_postcode" required>
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" placeholder=" Course Name" name="cn" id="calc_shipping_postcode" required>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <input type="number" class="form-control" placeholder=" Course Period" name="cl" id="calc_shipping_postcode" required>
+                  </div>
+                  <div class="form-group col-sm-12">
+                    <input type="text" name="desc" class="form-control" placeholder=" Course Description"  required>
+                  </div>
+                  <div class="form-group col-sm-12">
+                    <b>Enroll Period</b>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    START DATE: <input type="date" class="form-control"  value="<?php date_default_timezone_set('Asia/Kolkata');echo date('Y-m-d'); ?>" name="strtdt" id="calc_shipping_state">
+                  </div>
+                  <div class="form-group col-sm-6">
+                    END DATE: <input type="date" class="form-control" name="enddt" id="calc_shipping_state" required>
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <input type="date" class="form-control" id="calc_shipping_state" style="visibility: hidden;">
+                  </div>
+                  
+                    <input type="submit" name="submit"  value = "ADD">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="reset" name="calc_shipping" >CLEAR</button>
+                  
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="restorecourseselect.php">
+                      <button type="button" name='restore' style="padding:13px;"> Restore a Course </button>
+                    </a>
+                  
+                </div>
+              </div>
+            </form>
+            <?php
+            if(isset($_POST['submit']))
+            {
+
+              $department = $_POST['dept'];
+              $courseid = $_POST['cid'];
+              $coursename = $_POST['cn'];
+              $date1 = $_POST['strtdt'];
+              $date2= $_POST['enddt'];
+              $courseLength=$_POST['cl'];
+              $description = $_POST['desc'];
+              
+              $query = $con->prepare("Select dept_id from department where dept_name = ?");
+              $query->bind_param("s",$department);
+              if($query->execute())
+              {
+                $query->bind_result($dept);
+                while($query->fetch())
+                {
+                  $deptid = $dept;
+                }
+
+                $qry=$con->prepare('INSERT INTO `courses` (`course_code`,`course_name`,`course_desc`,`start_date`,`end_date`,`week`,`dept_id`)values(?,?,?,?,?,?,?)');
+                $qry->bind_param("sssssis",$courseid,$coursename,$description,$date1,$date2,$courseLength,$deptid);
+
+
+                if($qry->execute())
+                {
+                  echo "<script type = 'text/javascript'>alert('Course created succsessfully')</script>";
+                }
+                else
+                {
+
+                  echo "<script type = 'text/javascript'>alert('Course Creation failed')</script>";
+                }
+              }
+              else
+              {
+                echo "<script type = 'text/javascript'>alert('Department not Found')</script>";
+              }
+            }
+            ?>
+          </div>
+        </div>
+      </section>
+
+      
+
+
+    </div>
+    <!-- eof #box_wrapper -->
+  </div>
+  <!-- eof #canvas -->
+
+  
 
 </body>
 
 
 <!-- Mirrored from webdesign-finder.com/html/starford/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Oct 2018 05:22:30 GMT -->
 </html>
-<?php
-
-if($_POST)
-{
-   if($_POST['submit'])
-   {
-
-      $department = $_POST['dept'];
-      $courseid = $_POST['cid'];
-      $coursename = $_POST['cn'];
-      $date1 = $_POST['strtdt'];
-      $date2= $_POST['enddt'];
-      $week = abs((strtotime($date1)-strtotime($date2))/(60*60*24*7));
-      $description = $_POST['desc'];
-		$staffname = $_SESSION['staffname'];
-		
-
-      $query = mysqli_query($con,"Select dept_id from department where dept_name = '$department'");
-      if($query)
-      {
-         while($row =$query->fetch_assoc())
-         {
-            $deptid = $row["dept_id"];
-        }
-        $query = mysqli_query($con,"insert into courses (course_code,course_name,Author,course_desc,start_date,end_date,week,dept_id)values('$courseid','$coursename','$staffname','$description','$date1','$date2','$week','$deptid')");
-        if($query)
-        {
-         echo "<script type = 'text/javascript'>alert('Course created succsessfully')</script>";
-     }
-     else
-     {
-         echo "<script type = 'text/javascript'>alert('Course Creation failed')</script>";
-     }
- }
- else
- {
-     echo "<script type = 'text/javascript'>alert('Department not Found')</script>";
- }
-}
-}
-
-?>

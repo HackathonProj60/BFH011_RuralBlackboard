@@ -136,8 +136,12 @@ if ($sus == 1) {
 										</ul>
 									</li>
 
+
 									<li>
 										<a href="studNprofile.php">My Profile</a>
+									</li>
+									<li>
+										<a href="studentN.php">My Profile</a>
 									</li>
 								</ul>
 							</nav>
